@@ -14,9 +14,14 @@ import { setTimeout } from 'timers';
 })
 export class ServersComponent implements OnInit {
   allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
   constructor() {}
 
   ngOnInit(): void {
     setTimeout(() => (this.allowNewServer = true), 2000);
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created!';
   }
 }
