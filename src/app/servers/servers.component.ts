@@ -24,7 +24,8 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = 'Server was created!';
+    this.serverCreationStatus =
+      'Server was created! Servername is ' + this.serverName;
   }
 
   onUpdateServerName(event: Event) {
